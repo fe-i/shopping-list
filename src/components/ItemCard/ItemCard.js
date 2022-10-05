@@ -1,8 +1,12 @@
 import "./ItemCard.css"
 
-function ItemCard() {
+function ItemCard({name, quantity, price}) {
     return(
-        <div>LOL</div>
+        <div className="ItemCard">
+            <p>Name: {name}</p>
+            <p>Quantity: {quantity}</p>
+            <p>Price: ${price}</p>
+        </div>
     )
 }
 

@@ -4,7 +4,11 @@ import ItemCard from "./components/ItemCard/ItemCard";
 function App() {
   return (
     <div className="App">
-      <ItemCard />
+      <h1>Shopping List</h1>
+
+      <ItemCard name="pencil" quantity={2} price={0.51}/>
+      <ItemCard name="pen" quantity={3} price={1.23}/>
+      <ItemCard name="highlighter" quantity={1} price={2.11}/>
     </div>
   );
 }
