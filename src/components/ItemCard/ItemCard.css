@@ -1,15 +1,19 @@
 .ItemCard {
-    background-color: gray;
-    margin: auto;
-	margin-bottom: 10px;
-	padding: 5px;
-    max-width: 30vw;
-    max-height: 30vh;
-    text-indent: 5px;
-    border-radius: 20px;
+  background-color: lightgray;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  max-width: 60vw;
+  max-height: 30vh;
+  text-indent: 5px;
+  border-radius: 20px;
 }
 
 p {
-    color: red;
-    margin: 1%;
+  margin: 1%;
+  text-align: left;
+}
+
+.itemName {
+  font-weight: bold;
 }
