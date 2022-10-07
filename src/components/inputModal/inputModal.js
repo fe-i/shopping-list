@@ -6,10 +6,10 @@ const InputModal = () => {
         <div>
             <form onSubmit={(e) => {
                 e.preventDefault()
-                console.log("submit")
+                console.log(e.target[0].value)
             }
             }>
-                <input />
+                <input type="text" id="fname" name="fname"/>
                 <input />
                 <input />
                 <button type="submit" />
