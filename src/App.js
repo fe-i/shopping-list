@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import CreateButton from "./components/createButton/createButton";
-import ItemCard from "./components/items/itemCard";
+import ItemCard from "./components/itemCard/itemCard";
 
 function App() {
   const [items, setItems] = useState([]);
