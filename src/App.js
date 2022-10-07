@@ -18,10 +18,7 @@ function App() {
           setItems([...items, { name: "pencil", quantity: 1, price: 1.2 }]);
         }}
       />
-
-      <ItemCard name="pencil" quantity={2} price={0.51} />
-      <ItemCard name="pens" quantity={3} price={1.23} />
-      <ItemCard name="highlighters" quantity={1} price={2.11} />
+      { items.map((item, i) => <ItemCard {...item} key={i} />) }
     </div>
   );
 }
