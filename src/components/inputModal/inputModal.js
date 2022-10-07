@@ -9,7 +9,7 @@ const InputModal = () => {
                 console.log(e.target[0].value)
             }
             }>
-                <input type="text" id="fname" name="fname"/>
+                <input type="text" id="fname" name="fname" required/>
                 <input />
                 <input />
                 <button type="submit" />
