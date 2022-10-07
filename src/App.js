@@ -17,7 +17,7 @@ function App() {
       <h1>Shopping List</h1>
       <CreateButton
         addNew={() => {
-          setItems([...items, { name: "pencil", quantity: 1, price: 1.2 }]);
+          setItems([...items, { name: "test", quantity: 1, price: 1.2 }]);
         }}
       />
       { items.map((item, i) => <ItemCard {...item} key={i} />) }
