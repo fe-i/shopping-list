@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import CreateButton from "./components/createButton/createButton";
 import ItemCard from "./components/itemCard/itemCard";
+import InputModal from "./components/inputModal/inputModal";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      <InputModal />
       <h1>Shopping List</h1>
       <CreateButton
         addNew={() => {
