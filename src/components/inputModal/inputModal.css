@@ -1,0 +1,20 @@
+button {
+    border: 2px solid rgb(80, 80, 80);
+    background-color: lightgray;
+    width: 60vw;
+    padding: 5px;
+    height: 6vh;
+    border-radius: 20px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+button:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+button:active {
+    background-color: rgb(217, 217, 217);
+}

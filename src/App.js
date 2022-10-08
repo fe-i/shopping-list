@@ -13,13 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      <InputModal />
+      <div id="inputModal" hidden>
+        <InputModal addNew={(name, quantity, price) => {
+          setItems([...items, { name, quantity, price }]);
+        }} />
+      </div>
       <h1>Shopping List</h1>
-      <CreateButton
-        addNew={() => {
-          setItems([...items, { name: "test", quantity: 1, price: 1.2 }]);
-        }}
-      />
+      <CreateButton />
       { items.map((item, i) => <ItemCard {...item} key={i} />) }
     </div>
   );

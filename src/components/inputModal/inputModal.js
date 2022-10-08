@@ -1,25 +1,24 @@
 import React from "react";
 import "./inputModal.css";
 
-const InputModal = () => {
+const InputModal = ({ addNew }) => {
     return (
         <div>
             <form onSubmit={(e) => {
                 e.preventDefault();
-                console.log(e.target[0].value);
-                console.log(e.target[1].value);
-                console.log(e.target[2].value);
+                addNew(e.target[0].value, e.target[1].value, e.target[2].value);
+                document.getElementById("inputModal").setAttribute("hidden", "hidden");
             }}>
                 <label>Name: </label>
-                <input type="text" name="name" required value="1"/>
+                <input type="text" name="name" required/>
                 <br />
                 <label>Quantity: </label>
-                <input type="number" name="quantity" required value="1"/>
+                <input type="number" name="quantity" required/>
                 <br />
                 <label>Price: $</label>
-                <input type="text" name="price" required value="1"/>
+                <input type="text" name="price" required/>
                 <br />
-                <button type="submit" />
+                <button type="submit">Add</button>
             </form>
         </div>
     )
