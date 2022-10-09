@@ -8,7 +8,7 @@ function ItemCard({ name, quantity, price }) {
         <p>Quantity: {quantity}</p>
         <p>Price: ${price}</p>
       </div>
-      <button className="removeButton">-</button>
+      <button className="removeButton" onClick={() => console.log("hi")}>-</button>
     </div>
   );
 }
