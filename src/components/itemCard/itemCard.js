@@ -1,6 +1,6 @@
 import "./itemCard.css";
 
-function ItemCard({ name, quantity, price }) {
+function ItemCard({ name, quantity, price, items, setItems, order }) {
   return (
     <div className="itemCard">
       <div>
@@ -8,7 +8,11 @@ function ItemCard({ name, quantity, price }) {
         <p>Quantity: {quantity}</p>
         <p>Price: ${price}</p>
       </div>
-      <button className="removeButton" onClick={() => console.log("hi")}>-</button>
+      <button className="removeButton" onClick={() => {
+        const newItems = items;
+        newItems.pop();
+        setItems(newItems);
+      }}>-</button>
     </div>
   );
 }

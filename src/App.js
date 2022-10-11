@@ -20,7 +20,7 @@ function App() {
       </div>
       <h1>Shopping List</h1>
       <CreateButton />
-      { items.map((item, i) => <ItemCard {...item} key={i} />) }
+      { items.map((item, i) => <ItemCard {...item} items={items} setItems={setItems} order={i} key={i} />) }
     </div>
   );
 }
