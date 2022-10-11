@@ -8,11 +8,13 @@ function ItemCard({ name, quantity, price, items, setItems, order }) {
         <p>Quantity: {quantity}</p>
         <p>Price: ${price}</p>
       </div>
-      <button className="removeButton" onClick={() => {
-        const newItems = items;
-        newItems.pop();
-        setItems(newItems);
-      }}>-</button>
+      <button
+        className="removeButton"
+        onClick={() => {
+          setItems([...items.slice(0, order), ...items.slice(order + 1)]);
+        }}>
+        -
+      </button>
     </div>
   );
 }
