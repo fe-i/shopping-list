@@ -10,7 +10,7 @@ function ItemCard({ name, quantity, price, items, setItems, order }) {
       </div>
       <button className="removeButton" onClick={() => {
         const newItems = items;
-        newItems.pop();
+        newItems.pop(order);
         setItems(newItems);
       }}>-</button>
     </div>
