@@ -1,9 +1,9 @@
 import React from "react";
 import "./inputModal.css";
 
-const InputModal = ({ addNew }) => {
+const InputModal = ({ addNew, isShowing }) => {
     return (
-        <div>
+        <div hidden={!isShowing}>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 addNew(e.target[0].value, e.target[1].value, e.target[2].value);

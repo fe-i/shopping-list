@@ -6,6 +6,7 @@ import InputModal from "./components/inputModal/inputModal";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [isShowing, setIsShowing] = useState(false)
 
   useEffect(() => {
     console.log(items);
@@ -13,13 +14,16 @@ function App() {
 
   return (
     <div className="App">
-      <div id="inputModal" hidden>
-        <InputModal addNew={(name, quantity, price) => {
+      
+        <InputModal
+        addNew={(name, quantity, price) => {
           setItems([...items, { name, quantity, price }]);
-        }} />
-      </div>
+        }}
+        isShowing={isShowing}
+        />
+
       <h1>Shopping List</h1>
-      <CreateButton />
+      <CreateButton setIsShowing={setIsShowing}/>
       { items.map((item, i) => <ItemCard {...item} items={items} setItems={setItems} order={i} key={i} />) }
     </div>
   );
