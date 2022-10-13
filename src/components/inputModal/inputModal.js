@@ -1,13 +1,13 @@
 import React from "react";
 import "./inputModal.css";
 
-const InputModal = ({ addNew, isShowing }) => {
+const InputModal = ({ addNew, isShowing, setIsShowing }) => {
     return (
         <div hidden={!isShowing}>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 addNew(e.target[0].value, e.target[1].value, e.target[2].value);
-                document.getElementById("inputModal").setAttribute("hidden", "hidden");
+                setIsShowing((isShowing) => !isShowing);
             }}>
                 <label>Name: </label>
                 <input type="text" name="name" required/>

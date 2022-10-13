@@ -20,6 +20,7 @@ function App() {
           setItems([...items, { name, quantity, price }]);
         }}
         isShowing={isShowing}
+        setIsShowing={setIsShowing}
         />
 
       <h1>Shopping List</h1>
