@@ -3,21 +3,24 @@ import "./inputModal.css";
 
 const InputModal = ({ addNew, isShowing, setIsShowing }) => {
     return (
-        <div hidden={!isShowing}>
+        <div className="inputModal" hidden={!isShowing}>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 addNew(e.target[0].value, e.target[1].value, e.target[2].value);
                 setIsShowing((isShowing) => !isShowing);
             }}>
+                <div className="field">
                 <label>Name: </label>
                 <input type="text" name="name" required/>
-                <br />
+                </div>
+                <div className="field">
                 <label>Quantity: </label>
                 <input type="number" name="quantity" required/>
-                <br />
+                </div>
+                <div className="field">
                 <label>Price: $</label>
                 <input type="text" name="price" required/>
-                <br />
+                </div>
                 <button type="submit">Add</button>
             </form>
         </div>

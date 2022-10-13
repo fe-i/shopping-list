@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.inputModal {
+    background-color: wheat;
+    height: 60vh;
+    width: 80vw;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+label {
+    font-size: x-large;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+}
+
+input {
+    height: 3vh;
+    border-radius: 15px;
+    border: 0;
+    background-color: cornsilk;
+    padding: 5px;
+}
+
 button {
     border: 2px solid rgb(80, 80, 80);
     background-color: lightgray;
