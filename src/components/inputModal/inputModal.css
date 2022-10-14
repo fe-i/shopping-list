@@ -42,6 +42,13 @@ label {
     margin: 5px;
 }
 
+.formContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 input {
     height: 3vh;
     border-radius: 15px;
@@ -50,9 +57,18 @@ input {
     padding: 5px;
 }
 
+.closeButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 50px;
+    padding-top: 1px;
+}
+
 .closeButton {
     border: 0;
     outline: none;
+    background: transparent;
     padding: 1px;
     border-radius: 20px;
     margin: 5px;

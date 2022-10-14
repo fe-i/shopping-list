@@ -7,6 +7,7 @@ const InputModal = ({ addNew, isShowing, setIsShowing }) => {
             <div className="closeButtonContainer">
                 <button className="closeButton" onClick={() => setIsShowing(false)}>X</button>
             </div>
+            <div className="formContainer">
             <form onSubmit={(e) => {
                 e.preventDefault();
                 addNew(e.target[0].value, e.target[1].value, e.target[2].value);
@@ -26,6 +27,7 @@ const InputModal = ({ addNew, isShowing, setIsShowing }) => {
                 </div>
                 <button className="addButton" type="submit">Add</button>
             </form>
+            </div>
         </div>
     )
 }
