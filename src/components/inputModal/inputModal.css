@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
 
     position: absolute;
@@ -20,6 +21,10 @@
     bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.invisible {
+    display: none;
 }
 
 .field {
@@ -45,7 +50,17 @@ input {
     padding: 5px;
 }
 
-button {
+.closeButton {
+    border: 0;
+    outline: none;
+    padding: 1px;
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.addButton {
     border: 2px solid rgb(80, 80, 80);
     background-color: lightgray;
     width: 60vw;
@@ -58,10 +73,10 @@ button {
     font-size: xx-large;
 }
 
-button:hover {
+.addButton:hover {
     background-color: rgb(175, 175, 175);
 }
 
-button:active {
+.addButton:active {
     background-color: rgb(217, 217, 217);
 }

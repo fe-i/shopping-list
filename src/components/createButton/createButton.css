@@ -1,4 +1,4 @@
-button {
+.createButton {
   border: 2px solid rgb(80, 80, 80);
   background-color: lightgray;
   width: 60vw;
@@ -11,10 +11,10 @@ button {
   font-size: xx-large;
 }
 
-button:hover {
+.createButton:hover {
   background-color: rgb(175, 175, 175);
 }
 
-button:active {
+.createButton:active {
   background-color: rgb(217, 217, 217);
 }
