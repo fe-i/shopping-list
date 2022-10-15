@@ -9,6 +9,7 @@
   color: rgb(80, 80, 80);
   font-weight: bolder;
   font-size: xx-large;
+  cursor: pointer;
 }
 
 .createButton:hover {

@@ -14,18 +14,16 @@ function App() {
 
   return (
     <div className="App">
-      
-        <InputModal
+      <InputModal
         addNew={(name, quantity, price) => {
           setItems([...items, { name, quantity, price }]);
         }}
         isShowing={isShowing}
         setIsShowing={setIsShowing}
-        />
-
+      />
       <h1>Shopping List</h1>
-      <CreateButton setIsShowing={setIsShowing}/>
-      { items.map((item, i) => <ItemCard {...item} items={items} setItems={setItems} order={i} key={i} />) }
+      <CreateButton setIsShowing={setIsShowing} />
+      {items.map((item, i) => <ItemCard {...item} items={items} setItems={setItems} order={i} key={i} />)}
     </div>
   );
 }
