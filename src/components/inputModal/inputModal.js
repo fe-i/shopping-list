@@ -19,7 +19,7 @@ const InputModal = ({ addNew, isShowing, setIsShowing }) => {
                 </div>
                 <div className="field">
                 <label>Quantity: </label>
-                <input type="number" name="quantity" required/>
+                <input type="number" name="initialQty" required/>
                 </div>
                 <div className="field">
                 <label>Price: $</label>

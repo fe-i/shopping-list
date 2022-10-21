@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <InputModal
-        addNew={(name, quantity, price) => {
-          setItems([...items, { name, quantity, price }]);
+        addNew={(name, initialQty, price) => {
+          setItems([...items, { name, initialQty, price }]);
         }}
         isShowing={isShowing}
         setIsShowing={setIsShowing}
