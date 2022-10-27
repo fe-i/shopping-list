@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { deleteCard } from "../../storage/methods";
 import "./itemCard.css";
 
 
-function ItemCard({ name, initialQty, price, items, setItems, order }) {
-  console.log(initialQty + "hi")
+function ItemCard({ id, name, initialQty, price, items, setItems, order }) {
   const [quantity, setQuantity] = useState(initialQty);
 
   return (
@@ -24,6 +24,7 @@ function ItemCard({ name, initialQty, price, items, setItems, order }) {
         className="removeButton"
         onClick={() => {
           setItems([...items.slice(0, order), ...items.slice(order + 1)]);
+          deleteCard(id);
         }}>
         -
       </button>

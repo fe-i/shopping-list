@@ -3,20 +3,21 @@ import "./App.css";
 import CreateButton from "./components/createButton/createButton";
 import ItemCard from "./components/itemCard/itemCard";
 import InputModal from "./components/inputModal/inputModal";
+import { getCards } from "./storage/methods";
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(getCards());
   const [isShowing, setIsShowing] = useState(false)
 
   useEffect(() => {
-    console.log(items);
+    console.log(getCards());
   }, [items]);
 
   return (
     <div className="App">
       <InputModal
-        addNew={(name, initialQty, price) => {
-          setItems([...items, { name, initialQty, price }]);
+        addNew={(id, name, initialQty, price) => {
+          setItems([...items, { id, name, initialQty, price }]);
         }}
         isShowing={isShowing}
         setIsShowing={setIsShowing}
