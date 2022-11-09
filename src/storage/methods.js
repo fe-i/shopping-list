@@ -10,7 +10,8 @@ export const addCard = (newCard) => {
 
 export const deleteCard = (id) => {
     const cards = getCards();
-    cards.filter(c => c.id !== id);
+    const newCards = cards.filter(c => c.id !== id);
+    localStorage.setItem("cards", JSON.stringify(newCards));
 }
 
 export const id = () => (new Date()).getTime();

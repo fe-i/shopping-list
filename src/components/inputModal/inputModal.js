@@ -15,7 +15,7 @@ const InputModal = ({ addNew, isShowing, setIsShowing }) => {
                 addNew(ids, e.target[0].value, e.target[1].value, e.target[2].value);
                 setIsShowing(false);
 
-                addCard({ ids, name: e.target[0].value, quantity: e.target[1].value, price: e.target[2].value });
+                addCard({ id: ids, name: e.target[0].value, quantity: e.target[1].value, price: e.target[2].value });
             }}>
                 <div className="field">
                 <label>Name: </label>
