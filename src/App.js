@@ -24,7 +24,7 @@ function App() {
       />
       <h1>Shopping List</h1>
       <CreateButton setIsShowing={setIsShowing} />
-      {items.map((item, i) => <ItemCard {...item} items={items} setItems={setItems} order={i} key={i} />)}
+      {items.map((item, i) => <ItemCard {...item} initialQty={item.initialQty ?? item.quantity} items={items} setItems={setItems} order={i} key={i} />)}
     </div>
   );
 }

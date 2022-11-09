@@ -14,4 +14,10 @@ export const deleteCard = (id) => {
     localStorage.setItem("cards", JSON.stringify(newCards));
 }
 
+export const updateCard = (id, newCard) => {
+    const cards = getCards();
+    const newCards = cards.filter(c => c.id !== id);
+    localStorage.setItem("cards", JSON.stringify([...newCards, newCard]));
+}
+
 export const id = () => (new Date()).getTime();

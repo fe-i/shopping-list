@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { deleteCard } from "../../storage/methods";
+import { deleteCard, updateCard } from "../../storage/methods";
 import "./itemCard.css";
 
 
@@ -15,7 +15,9 @@ function ItemCard({ id, name, initialQty, price, items, setItems, order }) {
         <button
         className="modifyButton"
         onClick={() => {
-          setQuantity(prompt("New quantity?"));
+          const newQty = prompt("New quantity?");
+          setQuantity(newQty);
+          updateCard(id, { id, name, quantity: newQty, price });
         }}>
         Modify Quantity
         </button>
