@@ -11,11 +11,11 @@ const InputModal = ({ addNew, isShowing, setIsShowing }) => {
             <div className="formContainer">
             <form onSubmit={(e) => {
                 e.preventDefault();
-                const id = id();
-                addNew(id, e.target[0].value, e.target[1].value, e.target[2].value);
+                const ids = id();
+                addNew(ids, e.target[0].value, e.target[1].value, e.target[2].value);
                 setIsShowing(false);
 
-                addCard({ id, name: e.target[0].value, quantity: e.target[1].value, price: e.target[2].value });
+                addCard({ ids, name: e.target[0].value, quantity: e.target[1].value, price: e.target[2].value });
             }}>
                 <div className="field">
                 <label>Name: </label>

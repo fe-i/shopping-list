@@ -3,14 +3,14 @@ export const getCards = () => {
 }
 
 export const addCard = (newCard) => {
-    return getCards() == []
+    return getCards() === []
     ? localStorage.setItem("cards", JSON.stringify([newCard]))
     : localStorage.setItem("cards", JSON.stringify([...getCards(), newCard]));
 }
 
 export const deleteCard = (id) => {
     const cards = getCards();
-    const newCards = cards.filter(c => c.id != id);
+    cards.filter(c => c.id !== id);
 }
 
 export const id = () => (new Date()).getTime();
